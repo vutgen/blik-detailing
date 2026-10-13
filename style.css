@@ -116,6 +116,7 @@ h2 {
   position: relative;
   min-height: 100svh;
   padding-top: 92px;
+  padding-bottom: clamp(28px, 5vw, 84px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -183,7 +184,6 @@ h2 {
   margin-top: auto;
   width: min(1080px, 100vw);
   align-self: center;
-  margin-bottom: -1%;
   opacity: 0;
   transform: translateX(8%);
   animation: car-in 1.5s .55s cubic-bezier(.2,.7,.1,1) forwards;
