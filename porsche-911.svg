@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380">
+  <defs>
+    <path id="bodyp" d="
+      M52 322
+      C48 298 56 268 78 248
+      C84 238 90 234 98 230
+      C150 212 225 188 285 178
+      C330 172 372 164 404 158
+      L536 70
+      C548 62 570 60 600 60
+      C690 58 760 64 820 84
+      C900 108 980 138 1040 154
+      C1090 166 1124 172 1134 196
+      L1138 300
+      C1140 324 1134 342 1118 344
+      L947.4 346 A92 92 0 1 0 804.6 346
+      L356.4 346 A92 92 0 1 0 213.6 346
+      L84 346
+      C62 346 54 338 52 322 Z"/>
+    <clipPath id="bodyclip"><use href="#bodyp"/></clipPath>
+
+    <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34475a"/>
+      <stop offset=".18" stop-color="#1f2c38"/>
+      <stop offset=".42" stop-color="#101820"/>
+      <stop offset=".75" stop-color="#080d12"/>
+      <stop offset="1" stop-color="#030507"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a6379"/>
+      <stop offset=".45" stop-color="#18262f"/>
+      <stop offset="1" stop-color="#0a1117"/>
+    </linearGradient>
+    <linearGradient id="refl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dcebf6" stop-opacity="0"/>
+      <stop offset=".12" stop-color="#dcebf6" stop-opacity=".55"/>
+      <stop offset=".4" stop-color="#dcebf6" stop-opacity=".18"/>
+      <stop offset=".72" stop-color="#dcebf6" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#dcebf6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="floorfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".75"/>
+    </linearGradient>
+    <radialGradient id="spec" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spoke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5d6f7e"/>
+      <stop offset=".5" stop-color="#1a232b"/>
+      <stop offset="1" stop-color="#0c1116"/>
+    </linearGradient>
+
+    <path id="sp" d="M-4 -14 L-5.5 -59 L5.5 -59 L4 -14 Z"/>
+    <g id="wheel">
+      <circle r="84" fill="#06080b"/>
+      <circle r="79" fill="#0d1318"/>
+      <circle r="79" fill="none" stroke="#25313b" stroke-width="1.5"/>
+      <circle r="66" fill="none" stroke="#18212a" stroke-width="2"/>
+      <circle r="63" fill="#5f7282"/>
+      <circle r="60" fill="#0a0f14"/>
+      <circle r="50" fill="#222c34"/>
+      <circle r="50" fill="none" stroke="#0c1116" stroke-width="3" stroke-dasharray="3 7"/>
+      <circle r="34" fill="#0a0f14"/>
+      <path d="M8 -46 A47 47 0 0 1 46 -8 L32 -6 A32 32 0 0 0 6 -32 Z" fill="#f2b45a" stroke="#a9742a" stroke-width="1"/>
+      <g fill="url(#spoke)" stroke="#7e92a3" stroke-width=".8" stroke-opacity=".6">
+        <use href="#sp"/>
+        <use href="#sp" transform="rotate(36)"/><use href="#sp" transform="rotate(72)"/>
+        <use href="#sp" transform="rotate(108)"/><use href="#sp" transform="rotate(144)"/>
+        <use href="#sp" transform="rotate(180)"/><use href="#sp" transform="rotate(216)"/>
+        <use href="#sp" transform="rotate(252)"/><use href="#sp" transform="rotate(288)"/>
+        <use href="#sp" transform="rotate(324)"/>
+      </g>
+      <circle r="15" fill="#10171d" stroke="#8ea2b2" stroke-width="1.5"/>
+      <circle r="6" fill="#c8d4dd"/>
+    </g>
+  </defs>
+
+  <!-- ниши колёс -->
+  <circle cx="285" cy="288" r="94" fill="#010203"/>
+  <circle cx="876" cy="288" r="94" fill="#010203"/>
+
+  <!-- антикрыло -->
+  <path d="M1096 172 C1096 152 1086 142 1078 136" fill="none" stroke="#0c1319" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1122 178 C1124 154 1118 138 1112 128" fill="none" stroke="#0c1319" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1052 130 C1090 122 1142 112 1190 100 L1196 112 C1152 126 1100 138 1056 146 Z" fill="#0e161d"/>
+  <path d="M1052 130 C1090 122 1142 112 1190 100" fill="none" stroke="#a9bccb" stroke-opacity=".7" stroke-width="1.6"/>
+
+  <!-- кузов -->
+  <use href="#bodyp" fill="url(#paint)"/>
+
+  <g clip-path="url(#bodyclip)">
+    <path d="M70 232 C200 208 330 190 470 178 C650 164 820 166 980 196 C1050 210 1110 226 1138 236 L1138 252 C1100 240 1040 226 970 214 C820 188 650 186 470 198 C330 210 200 226 70 250 Z" fill="url(#refl)"/>
+    <path d="M300 262 C500 244 760 244 940 268 L940 282 C760 260 500 258 300 276 Z" fill="#cfe0ee" opacity=".07"/>
+    <ellipse cx="270" cy="186" rx="70" ry="9" fill="url(#spec)" opacity=".9"/>
+    <ellipse cx="850" cy="168" rx="80" ry="10" fill="url(#spec)" opacity=".75"/>
+    <rect x="40" y="250" width="1120" height="100" fill="url(#floorfade)" opacity=".7"/>
+  </g>
+
+  <!-- контурный свет по капоту и крыше -->
+  <path d="M98 230 C150 212 225 188 285 178 C330 172 372 164 404 158 L536 70 C548 62 570 60 600 60 C690 58 760 64 820 84 C900 108 980 138 1040 154 C1090 166 1124 172 1134 196" fill="none" stroke="#c6d6e3" stroke-opacity=".6" stroke-width="1.5"/>
+
+  <!-- стёкла -->
+  <path d="M424 148 L532 78 C542 71 556 69 576 69 L638 69 L652 148 Z" fill="url(#glass)"/>
+  <path d="M672 70 C736 70 788 76 830 92 C880 110 922 128 946 148 L680 148 Z" fill="url(#glass)"/>
+  <path d="M448 140 L520 90 L540 90 L470 140 Z" fill="#fff" opacity=".1"/>
+  <path d="M638 69 L672 70 L680 148 L652 148 Z" fill="#04070a"/>
+  <path d="M418 150 L946 150" stroke="#04070a" stroke-width="4"/>
+  <path d="M418 150 L536 71" stroke="#04070a" stroke-width="3" fill="none"/>
+
+  <!-- швы дверей, ручка, зеркало -->
+  <path d="M420 150 C418 220 420 290 424 346" fill="none" stroke="#020406" stroke-width="2"/>
+  <path d="M680 152 C686 220 692 290 698 346" fill="none" stroke="#020406" stroke-width="2"/>
+  <rect x="598" y="164" width="40" height="7" rx="3.5" fill="#030507"/>
+  <rect x="598" y="164" width="40" height="2" rx="1" fill="#6d8396" opacity=".5"/>
+  <path d="M436 150 L474 148 C482 148 486 156 482 162 L462 170 C448 170 438 162 436 150 Z" fill="#101a23" stroke="#b9cad6" stroke-opacity=".5" stroke-width="1"/>
+  <path d="M440 152 L474 150" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+
+  <!-- воздухозаборник заднего крыла -->
+  <path d="M716 216 C746 214 780 220 800 232 L800 292 C776 286 744 286 716 292 Z" fill="#020406"/>
+  <g stroke="#3a4a58" stroke-width="1.4" opacity=".6">
+    <path d="M722 230 L796 242"/><path d="M722 246 L796 258"/><path d="M722 262 L796 274"/><path d="M722 278 L796 290"/>
+  </g>
+
+  <!-- порог -->
+  <path d="M356 322 L806 322 L798 346 L364 346 Z" fill="#04070a"/>
+  <path d="M356 322 L806 322" stroke="#a9bccb" stroke-opacity=".4" stroke-width="1.5"/>
+
+  <!-- перед -->
+  <path d="M82 244 C110 232 150 224 182 220 L186 234 C154 238 116 248 88 258 Z" fill="#060a0e" stroke="#b9cad6" stroke-opacity=".55" stroke-width="1"/>
+  <circle cx="116" cy="246" r="9" fill="#0d1620" stroke="#d8e6f1" stroke-opacity=".8" stroke-width="1.5"/>
+  <circle cx="116" cy="246" r="3" fill="#fff"/>
+  <path d="M138 238 C154 234 168 232 180 230" stroke="#f4f8fb" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9"/>
+  <path d="M66 288 L196 280 L198 322 L62 324 Z" fill="#020406"/>
+  <g stroke="#2c3a46" stroke-width="1.2">
+    <path d="M70 298 L194 292"/><path d="M68 308 L196 304"/><path d="M66 316 L196 316"/>
+  </g>
+  <path d="M40 342 L120 340" stroke="#05080b" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- зад -->
+  <path d="M1096 186 C1114 188 1130 192 1136 200 L1137 214 C1124 206 1110 200 1096 198 Z" fill="#c4473a"/>
+  <path d="M1098 190 C1114 192 1128 196 1134 202" stroke="#ffc4b6" stroke-opacity=".75" stroke-width="2" fill="none"/>
+  <path d="M1040 172 C1070 178 1100 184 1120 192" stroke="#020406" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <rect x="1090" y="318" width="42" height="8" rx="3" fill="#b03a30" opacity=".9"/>
+  <rect x="1060" y="334" width="30" height="8" rx="4" fill="#0b1015" stroke="#8fa3b3" stroke-width="1.5"/>
+
+  <!-- колёса -->
+  <use href="#wheel" transform="translate(285 288)"/>
+  <use href="#wheel" transform="translate(876 288)"/>
+</svg>

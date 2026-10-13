@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Блик Детейлинг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&family=Onest:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="top__logo" href="#top" aria-label="Блик, на главную">Блик</a>
+  <nav class="top__nav" aria-label="Разделы">
+    <a href="#before-after">До и после</a>
+    <a href="#services">Услуги</a>
+    <a href="#packages">Пакеты</a>
+    <a href="#booking">Запись</a>
+  </nav>
+  <a class="top__tel" href="tel:+79000000000">+7 900 000-00-00</a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <h1 class="wordmark" id="wordmark" aria-label="Блик">
+        <span class="wordmark__row" aria-hidden="true"><span>Б</span><span>л</span><span>и</span><span>к</span></span>
+      </h1>
+      <div class="hero__copy">
+        <p class="hero__lead">Детейлинг-студия в Ростове-на-Дону. Возвращаем кузову глубину цвета.</p>
+        <p class="hero__sub">Полировка, керамика и плёнка без спешки: один мастер ведёт одну машину от осмотра до выдачи.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light" href="#booking">Записаться на осмотр</a>
+          <a class="link" href="#before-after">Смотреть до и после</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__car" id="car-stage">
+      <div class="car" id="car-svg">
+        <div class="car__shadow"></div>
+        <img class="car__img car__img--mirror" src="car.svg" alt="" aria-hidden="true">
+        <img class="car__img" src="car.svg" alt="Чёрное спорткупе с бликом на кузове">
+        <div class="car__sheen" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="section ba-section" id="before-after">
+    <div class="wrap ba-grid">
+      <div class="ba-copy">
+        <h2>Свет должен отражаться, а не рассеиваться</h2>
+        <p>Хаотичные круги и паутина мелких царапин съедают блеск. После машинной полировки отражение снова становится чётким. Потяните ползунок и посмотрите, как меняется лак.</p>
+        <dl class="facts">
+          <div><dt>Замер толщины</dt><dd>до начала работ</dd></div>
+          <div><dt>Фото каждого этапа</dt><dd>в личном чате с мастером</dd></div>
+        </dl>
+      </div>
+
+      <div class="ba" id="ba" style="--pos:50%">
+        <div class="ba__layer ba__after">
+          <span class="ba__tag">После</span>
+        </div>
+        <div class="ba__layer ba__before">
+          <span class="ba__tag">До</span>
+        </div>
+        <div class="ba__handle" aria-hidden="true"><span></span></div>
+        <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Сравнение лака до и после полировки">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <h2 class="services__title">Что мы делаем с машиной</h2>
+      <div class="services__grid">
+        <ul class="svc-list" role="tablist" aria-label="Услуги">
+          <li><button role="tab" class="svc-btn is-active" data-i="0" aria-selected="true"><span>Полировка кузова</span><em>от 15 000 ₽</em></button></li>
+          <li><button role="tab" class="svc-btn" data-i="1" aria-selected="false"><span>Керамическое покрытие</span><em>от 25 000 ₽</em></button></li>
+          <li><button role="tab" class="svc-btn" data-i="2" aria-selected="false"><span>Защитная плёнка</span><em>от 60 000 ₽</em></button></li>
+          <li><button role="tab" class="svc-btn" data-i="3" aria-selected="false"><span>Химчистка салона</span><em>от 12 000 ₽</em></button></li>
+          <li><button role="tab" class="svc-btn" data-i="4" aria-selected="false"><span>Детейлинг-мойка</span><em>от 3 500 ₽</em></button></li>
+        </ul>
+
+        <article class="svc-panel" id="svc-panel" role="tabpanel" aria-live="polite">
+          <h3 id="svc-title">Полировка кузова</h3>
+          <p id="svc-text">Убираем паутину царапин, голограммы и следы мойки. Лак снимаем только там, где это нужно, и контролируем толщину прибором.</p>
+          <div class="svc-meta">
+            <div><span>Срок</span><b id="svc-time">1–2 дня</b></div>
+            <div><span>Цена</span><b id="svc-price">от 15 000 ₽</b></div>
+          </div>
+          <div class="meters">
+            <label>Глубина блеска<i><b id="m-gloss" style="--w:90%"></b></i></label>
+            <label>Защита лака<i><b id="m-guard" style="--w:25%"></b></i></label>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS + PROCESS -->
+  <section class="stats" aria-label="Студия в цифрах">
+    <div class="wrap">
+      <div class="stats__grid">
+        <div class="stat"><b>9H</b><span>твёрдость керамики по шкале карандашей</span></div>
+        <div class="stat"><b>5 лет</b><span>письменная гарантия на покрытие</span></div>
+        <div class="stat"><b>1</b><span>мастер ведёт одну машину от начала до конца</span></div>
+        <div class="stat"><b>48 ч</b><span>средний срок полного комплекса</span></div>
+      </div>
+
+      <ol class="steps">
+        <li><h3>Осмотр</h3><p>Фото, замер лака, список дефектов и честная смета.</p></li>
+        <li><h3>Подготовка</h3><p>Мойка, глина, обезжиривание, маскировка резины и пластика.</p></li>
+        <li><h3>Работа</h3><p>Полировка, покрытие или плёнка. Фотоотчёт после каждого этапа.</p></li>
+        <li><h3>Выдача</h3><p>Осмотр при дневном свете и памятка по уходу.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section packages" id="packages">
+    <div class="wrap">
+      <h2>Три пакета на разные задачи</h2>
+      <div class="pk-grid">
+        <article class="pk">
+          <h3>Свежий блеск</h3>
+          <p class="pk__for">Для машины до трёх лет, без глубоких царапин.</p>
+          <ul>
+            <li>Детейлинг-мойка и деконтаминация</li>
+            <li>Одноэтапная полировка</li>
+            <li>Воск-герметик на 3 месяца</li>
+          </ul>
+          <p class="pk__price"><b>18 000 ₽</b><span>1 день</span></p>
+          <a class="btn btn--dark" href="#booking" data-pick="Свежий блеск">Выбрать</a>
+        </article>
+
+        <article class="pk pk--main">
+          <h3>Глубокий цвет</h3>
+          <p class="pk__for">Когда лак потускнел и хочется вернуть заводской вид.</p>
+          <ul>
+            <li>Всё из пакета «Свежий блеск»</li>
+            <li>Двухэтапная полировка</li>
+            <li>Керамика на кузов, 2 слоя</li>
+            <li>Обработка стёкол и дисков</li>
+          </ul>
+          <p class="pk__price"><b>42 000 ₽</b><span>2 дня</span></p>
+          <a class="btn btn--light" href="#booking" data-pick="Глубокий цвет">Выбрать</a>
+        </article>
+
+        <article class="pk">
+          <h3>Защита на годы</h3>
+          <p class="pk__for">Новая машина или та, что много ездит по трассе.</p>
+          <ul>
+            <li>Плёнка на капот, бампер и зеркала</li>
+            <li>Керамика на остальной кузов</li>
+            <li>Керамика на салон и кожу</li>
+          </ul>
+          <p class="pk__price"><b>от 95 000 ₽</b><span>3 дня</span></p>
+          <a class="btn btn--dark" href="#booking" data-pick="Защита на годы">Выбрать</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section booking" id="booking">
+    <div class="wrap booking__grid">
+      <div class="booking__copy">
+        <h2>Запишитесь на осмотр</h2>
+        <p>Осмотр занимает 20 минут и ничего не стоит. Покажем состояние лака под лампой и назовём точную цену.</p>
+        <p class="booking__hours">Ежедневно с 9:00 до 20:00<br>Ростов-на-Дону, ул. Примерная, 1</p>
+      </div>
+
+      <form class="form" id="form" novalidate>
+        <label>Имя
+          <input name="name" type="text" autocomplete="given-name" required>
+        </label>
+        <label>Автомобиль
+          <input name="car" type="text" placeholder="Например, BMW 3 серии, чёрный" required>
+        </label>
+        <label>Что интересует
+          <select name="service" id="f-service">
+            <option>Полировка кузова</option>
+            <option>Керамическое покрытие</option>
+            <option>Защитная плёнка</option>
+            <option>Химчистка салона</option>
+            <option>Детейлинг-мойка</option>
+            <option>Свежий блеск</option>
+            <option>Глубокий цвет</option>
+            <option>Защита на годы</option>
+            <option>Пока не знаю, нужен осмотр</option>
+          </select>
+        </label>
+        <p class="form__error" id="form-error" role="alert" hidden>Укажите имя и автомобиль.</p>
+        <p class="form__note" id="form-note" role="status" hidden></p>
+        <div class="form__actions">
+          <button type="submit" class="btn btn--light" data-channel="wa">Написать в WhatsApp</button>
+          <button type="submit" class="btn btn--ghost" data-channel="tg">Написать в Telegram</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__row">
+    <span class="foot__logo">Блик</span>
+    <span>Детейлинг-студия, Ростов-на-Дону</span>
+    <span>Сайт сделан в vuegen</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
